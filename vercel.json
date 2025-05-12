@@ -1,1 +1,15 @@
-
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "file_streamer.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "file_streamer.py"
+    }
+  ]
+}
